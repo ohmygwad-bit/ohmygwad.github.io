@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18211d">
+  <meta name="description" content="A quiet corner for fanfiction, original stories, and the worlds that stay with us.">
+  <title>Dango Fiction Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#18211d;--surface:#202b26;--surface-raised:#27342e;--ink:#f0eee4;--muted:#b0b9ad;--line:#3b4840;--accent:#c3d8a5;--accent-ink:#202b20;--warm:#e6bf83;--rose:#dc9c8f;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif;--content:1160px;--shadow:0 24px 80px #0007}
+    :root[data-theme="light"]{color-scheme:light;--bg:#f2f2e9;--surface:#fafaf5;--surface-raised:#e6eadf;--ink:#243029;--muted:#69756a;--line:#d3dbcf;--accent:#48674e;--accent-ink:#fff;--warm:#946a35;--rose:#a2574e;--shadow:0 24px 80px #18211d24}
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);transition:background .25s,color .25s}body:has(dialog[open]){overflow:hidden}button,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{color:inherit;cursor:pointer}a{color:inherit;text-decoration:none}:focus-visible{outline:3px solid var(--warm);outline-offset:4px}.wrap{width:min(var(--content),calc(100% - 56px));margin-inline:auto}.skip{position:absolute;z-index:9;top:-60px;left:12px;padding:10px 14px;background:var(--accent);color:var(--accent-ink)}.skip:focus{top:12px}
+    .masthead{border-bottom:1px solid var(--line)}.header-row{display:flex;min-height:82px;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{display:grid;width:40px;height:40px;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--accent);font:500 21px var(--serif)}.brand-name{font:600 21px/1.15 var(--serif);letter-spacing:0}.brand-name small{display:block;margin-top:4px;color:var(--muted);font:500 10px/1.2 var(--sans);letter-spacing:1.5px;text-transform:uppercase}.nav{display:flex;align-items:center;gap:25px}.nav a,.nav button{padding:8px 0;border:0;background:none;color:var(--muted);font-size:13px;font-weight:600}.nav a:hover,.nav button:hover{color:var(--ink)}.nav .nav-parent{color:var(--ink)}.header-actions{display:flex;align-items:center;gap:8px}.icon-button,.menu-button{display:grid;width:40px;height:40px;place-items:center;border:1px solid var(--line);border-radius:50%;background:transparent;font-size:17px}.icon-button:hover,.menu-button:hover{border-color:var(--accent);color:var(--accent)}.menu-button{display:none}.search-row{display:none;padding:0 0 14px}.search-row.open{display:block}.search-row input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:3px;background:var(--surface);color:var(--ink)}
+    .hero{position:relative;display:flex;min-height:510px;align-items:center;overflow:hidden;border-bottom:1px solid var(--line);background:#24352c}.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;opacity:.56}.hero:after{position:absolute;inset:0;background:linear-gradient(90deg,#111a15e8 0%,#111a15b8 52%,#111a1530 100%);content:""}.hero-inner{position:relative;z-index:1;padding-block:76px}.eyebrow{margin:0;color:var(--accent);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.hero h1{max-width:700px;margin:17px 0 14px;font:500 clamp(48px,7vw,82px)/1.04 var(--serif);letter-spacing:0}.hero-copy{max-width:450px;margin:0;color:#e0e6db;font-size:17px}.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:20px;margin-top:27px}.button{display:inline-flex;min-height:45px;align-items:center;justify-content:center;padding:10px 17px;border:1px solid var(--accent);border-radius:2px;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:700;transition:transform .18s,background .18s}.button:hover{transform:translateY(-2px);background:#d1e2b9}.button-quiet{border-color:#ffffff80;background:transparent;color:#fff}.button-quiet:hover{background:#ffffff18}.hero-caption{position:absolute;right:0;bottom:20px;color:#e0e6db;font-size:11px;letter-spacing:1px;text-transform:uppercase}
+    .quickbar{border-bottom:1px solid var(--line);background:var(--surface)}.quickbar .wrap{display:flex;min-height:53px;align-items:center;justify-content:space-between;gap:14px}.quick-links{display:flex;flex-wrap:wrap;gap:20px}.quick-links a{color:var(--muted);font-size:12px;font-weight:600}.quick-links a:hover{color:var(--ink)}.quick-note{color:var(--muted);font-size:11px;white-space:nowrap}
+    main{padding-bottom:80px}.section{padding-top:66px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:23px}.section-head h2{margin:7px 0 0;font:500 38px/1.15 var(--serif);letter-spacing:0}.section-head>p{max-width:390px;margin:0;color:var(--muted);font-size:13px}.library-tools{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:17px}.filters{display:flex;flex-wrap:wrap;gap:7px}.filter{min-height:34px;padding:6px 12px;border:1px solid var(--line);border-radius:20px;background:transparent;color:var(--muted);font-size:12px;font-weight:600}.filter:hover,.filter.active{border-color:var(--accent);background:var(--accent);color:var(--accent-ink)}.status-filter{min-height:35px;padding:6px 28px 6px 10px;border:1px solid var(--line);border-radius:2px;background:var(--surface);color:var(--ink);font-size:12px}.works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.work{display:flex;min-width:0;flex-direction:column;border:1px solid var(--line);background:var(--surface);transition:transform .2s,border-color .2s}.work:hover{transform:translateY(-3px);border-color:#819777}.work[hidden]{display:none}.cover{position:relative;display:flex;min-height:155px;align-items:end;overflow:hidden;padding:16px;background:#385045}.cover:before{position:absolute;inset:0;background:linear-gradient(135deg,#234638,#829275);content:""}.cover:after{position:absolute;right:-25px;bottom:-80px;width:190px;height:190px;border:1px solid #ffffff38;border-radius:50%;box-shadow:0 0 0 25px #ffffff0b,0 0 0 55px #ffffff0b;content:""}.cover.cedar:before{background:linear-gradient(140deg,#514f3b,#8b8060 52%,#293f34)}.cover.river:before{background:linear-gradient(140deg,#344d50,#6e9388 55%,#455948)}.cover.paper:before{background:linear-gradient(140deg,#6b504a,#ae8870 55%,#4b5845)}.cover-text{position:relative;z-index:1;color:#fff;font:500 24px/1.15 var(--serif)}.cover-kicker{position:absolute;z-index:1;top:12px;left:14px;color:#fff;font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}.work-copy{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:16px}.work-meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:.7px;text-transform:uppercase}.badge{padding:3px 7px;border:1px solid #d5ad75;color:var(--warm);font-size:9px;letter-spacing:.8px}.badge.original{border-color:#90a9b7;color:#abc7d2}.badge.completed{border-color:#8aa889;color:#accda9}.work h3{margin:10px 0 6px;font:500 23px/1.2 var(--serif);letter-spacing:0}.work-copy>p{margin:0;color:var(--muted);font-size:12px;line-height:1.65}.tag-list{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0 17px}.tag{padding:3px 7px;border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--muted);font-size:10px}.tag:hover{border-color:var(--accent);color:var(--accent)}.work-open{display:flex;align-items:center;gap:8px;margin-top:auto;padding:0;border:0;background:transparent;color:var(--accent);font-size:12px;font-weight:700}.work-open span{font-size:17px}.empty{display:none;padding:30px;border:1px dashed var(--line);color:var(--muted);text-align:center}.empty.show{display:block}
+    .note-band{display:block;margin-top:45px;padding:25px 0;border:0;border-block:1px solid var(--line);background:transparent}.note-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0}.note-copy h2{margin:9px 0;font:500 34px/1.2 var(--serif);letter-spacing:0}.note-copy>p:not(.eyebrow){max-width:440px;margin:0;color:var(--muted);font-size:13px}.note-copy a{margin-top:17px;color:var(--accent);font-size:12px;font-weight:700}
+    .footer{border-top:1px solid var(--line);background:var(--surface)}.footer-row{display:flex;min-height:84px;align-items:center;justify-content:space-between;gap:16px;color:var(--muted);font-size:11px}.footer-row p{margin:0}.footer-brand{color:var(--ink);font:500 19px var(--serif);letter-spacing:0}.footer-links{display:flex;gap:16px}.footer-links a:hover{color:var(--ink)}
+    dialog{width:min(620px,calc(100% - 28px));max-height:min(90vh,780px);padding:0;border:1px solid var(--line);background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}dialog::backdrop{background:#080d0bd9;backdrop-filter:blur(9px)}.gate{padding:clamp(24px,5vw,42px)}.gate-top{display:flex;align-items:center;gap:12px;padding-bottom:19px;border-bottom:1px solid var(--line)}.gate-seal{display:grid;width:42px;height:42px;flex:none;place-items:center;border:1px solid var(--accent);border-radius:50%;color:var(--accent);font:500 21px var(--serif)}.gate-brand{margin:0;font:500 23px/1.15 var(--serif);letter-spacing:0}.gate-label{margin:3px 0 0;color:var(--muted);font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase}.gate h1{margin:23px 0 8px;font:500 31px/1.2 var(--serif);letter-spacing:0}.gate-intro{margin:0 0 18px;color:var(--muted);font-size:13px}.warning-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}.warning-list li{padding-left:13px;border-left:2px solid var(--line);font-size:12px;line-height:1.7}.warning-list strong{color:var(--ink)}.warning-list a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}.gate-close{margin-top:19px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.gate-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.gate-actions .button{flex:1}.leave-button{border-color:var(--line);background:transparent;color:var(--muted)}.leave-button:hover{background:var(--surface-raised);color:var(--ink)}.gate-footnote{margin:13px 0 0;color:var(--muted);font-size:10px;text-align:center}
+    .reader-dialog{width:min(760px,calc(100% - 24px))}.reader{max-height:88vh;overflow:auto;padding:clamp(22px,5vw,48px)}.reader-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.reader-close{display:grid;width:36px;height:36px;flex:none;place-items:center;border:1px solid var(--line);border-radius:50%;background:transparent;font-size:19px}.reader h2{margin:12px 42px 9px 0;font:500 39px/1.15 var(--serif);letter-spacing:0}.reader-summary{margin:0;color:var(--muted);font-size:12px}.reader-controls{position:sticky;top:-1px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:19px 0;padding:9px 0;border-block:1px solid var(--line);background:var(--surface)}.reader-controls span{margin-right:3px;color:var(--muted);font-size:11px}.reader-controls button{min-width:35px;min-height:32px;padding:4px 9px;border:1px solid var(--line);background:transparent;font-size:12px}.reader-controls button:hover{border-color:var(--accent);color:var(--accent)}.reader-text{max-width:62ch;margin-inline:auto;font-size:17px;line-height:1.8}.reader-text p{margin:0 0 18px}.reader-rating{margin-top:22px;padding:12px 14px;border-left:2px solid var(--warm);background:var(--surface-raised);color:var(--muted);font-size:11px}
+    @media(max-width:850px){.wrap{width:calc(100% - 40px)}.nav{gap:15px}.nav a,.nav button{font-size:12px}.works{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-note{display:none}}
+    @media(max-width:640px){body{font-size:15px}.wrap{width:calc(100% - 32px)}.header-row{min-height:70px}.brand-mark{width:36px;height:36px}.brand-name{font-size:18px}.menu-button{display:grid}.nav{position:absolute;z-index:4;top:70px;right:0;left:0;display:none;align-items:stretch;gap:0;padding:8px 16px 14px;border-bottom:1px solid var(--line);background:var(--surface)}.nav.open{display:flex;flex-direction:column}.nav a,.nav button{padding:11px 0;border-bottom:1px solid var(--line);text-align:left}.nav a:last-child{border:0}.hero{min-height:460px}.hero-inner{padding-block:65px}.hero h1{max-width:500px;font-size:58px}.hero-copy{font-size:15px}.hero-caption{right:0;bottom:13px;font-size:9px}.quickbar .wrap{min-height:48px}.quick-links{gap:14px}.quick-links a{font-size:11px}.section{padding-top:52px}.section-head{align-items:flex-start;flex-direction:column;gap:9px}.section-head h2{font-size:34px}.library-tools{align-items:flex-start;flex-direction:column}.filters{gap:6px}.works{grid-template-columns:1fr;gap:11px}.cover{min-height:135px}.cover-text{font-size:21px}.work-copy{padding:14px}.note-band{grid-template-columns:1fr;margin-top:45px}.note-image{min-height:190px}.note-copy{padding:25px 20px 29px}.note-copy h2{font-size:30px}.footer-row{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:20px}.gate h1{font-size:27px}.gate{padding:23px}.gate-actions{flex-direction:column}.gate-actions .button{width:100%}.reader h2{font-size:33px}.reader-text{font-size:16px}}
+    .hero{min-height:0;border-bottom:1px solid var(--line);background:var(--bg)}.hero:after,.hero-image,.hero-caption{display:none}.hero-inner{padding-block:65px 44px}.hero h1{max-width:780px;font-size:64px}.hero-copy{color:var(--muted)}.button-quiet{border-color:var(--line);color:var(--ink)}.button-quiet:hover{background:var(--surface-raised)}.search-row.open{display:block}.works{display:block;border-top:1px solid var(--line)}.work,.work:hover{display:block;padding:20px 0;border:0;border-bottom:1px solid var(--line);background:transparent;transform:none}.work-copy{display:block;padding:0}.work-title{color:var(--ink);text-decoration:none}.work-title:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}.work h3{margin:6px 0 7px;font-size:25px}.work-copy>p{max-width:74ch;font-size:13px}.work-meta{font-size:10px}.tag-list{margin:10px 0 0}.note-band{display:block;margin-top:45px;padding:25px 0;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:transparent}.note-image{display:none}.note-copy{padding:0}.quickbar{background:transparent}.quickbar .wrap{justify-content:flex-start}.quick-note{display:none}
+    @media(max-width:850px){.works{display:block}}
+    @media(max-width:640px){.hero-inner{padding-block:52px 36px}.hero h1{font-size:46px}.work h3{font-size:23px}.header-row{gap:10px}.brand-name{font-size:17px}.header-actions{gap:5px}.quick-links{gap:12px}}
+    .tag-browser{display:grid;gap:9px;margin:0 0 20px;padding:13px 0;border-bottom:1px solid var(--line)}.tag-browser-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.tag-browser-title{font-size:11px;font-weight:700}.tag-browser-hint{margin-left:7px;color:var(--muted);font-size:10px}.tag-options{display:flex;flex-wrap:wrap;gap:7px}.tag-option{padding:5px 9px;border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--muted);font-size:11px}.tag-option:hover,.tag-option[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:var(--accent-ink)}.clear-tags{padding:4px 0;border:0;background:transparent;color:var(--muted);font-size:10px;text-decoration:underline;text-underline-offset:3px}.clear-tags:disabled{cursor:default;opacity:.45}.tag-filter-status{min-height:16px;margin:0;color:var(--muted);font-size:10px}
+    .nav-menu{position:relative}.nav-menu>summary{padding:8px 0;color:var(--muted);font-size:13px;font-weight:600;list-style:none;cursor:pointer}.nav-menu>summary::-webkit-details-marker{display:none}.nav-menu>summary::after{margin-left:5px;color:var(--accent);content:"⌄"}.nav-menu[open]>summary,.nav-menu>summary:hover{color:var(--ink)}.nav-submenu{position:absolute;z-index:6;top:calc(100% + 9px);left:-14px;display:grid;min-width:175px;padding:7px;border:1px solid var(--line);background:var(--surface);box-shadow:0 12px 30px #0003}.nav-submenu button{width:100%;padding:9px 10px!important;text-align:left}.nav-submenu button:hover{background:var(--surface-raised)}.submenu-label{padding:8px 10px 3px;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase}.nav-submenu button+ .submenu-label{margin-top:4px;border-top:1px solid var(--line)}.work-meta .rating-badge,.work-meta .status-badge{color:var(--warm)}.work-meta .status-badge{color:var(--accent)}
+    @media(max-width:640px){.nav-menu{width:100%}.nav-menu>summary{padding:11px 0;border-bottom:1px solid var(--line)}.nav-submenu{position:static;min-width:0;padding:3px 0 7px;border:0;border-bottom:1px solid var(--line);background:transparent;box-shadow:none}.nav-submenu button{padding:8px 12px!important}.nav-submenu .submenu-label{padding-left:12px}}
+    .reading-history[hidden]{display:none}.reading-history{margin:0 0 22px;padding:0 0 20px;border-bottom:1px solid var(--line)}.history-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}.history-head h3{margin:0;font:500 20px var(--serif)}.history-clear{padding:4px 0;border:0;background:transparent;color:var(--muted);font-size:10px;text-decoration:underline;text-underline-offset:3px}.history-clear:disabled{cursor:default;opacity:.45}.history-list{display:grid;gap:0;margin:0;padding:0;list-style:none}.history-item{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:8px 0;border-top:1px solid var(--line)}.history-story{font-size:12px;font-weight:700}.history-story:hover{color:var(--accent)}.history-detail,.history-time{margin:2px 0 0;color:var(--muted);font-size:10px}.history-time{flex:none}
+    @media(max-width:640px){.history-item{align-items:flex-start;flex-direction:column;gap:2px}.history-time{font-size:9px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#library">Skip to stories</a>
+
+  <dialog id="age-gate" aria-labelledby="gate-title" aria-describedby="gate-intro">
+    <div class="gate">
+      <div class="gate-top"><span class="gate-seal" aria-hidden="true">d</span><div><p class="gate-brand">Dango Fiction Archive</p><p class="gate-label">A small archive, read gently</p></div></div>
+      <h1 id="gate-title">A note before you enter</h1>
+      <p class="gate-intro" id="gate-intro">Please take a moment to read the archive guidelines.</p>
+      <ul class="warning-list">
+        <li><strong>Adult Themes (18+):</strong> Contains mature and explicit content. Read at your own discretion.</li>
+        <li><strong>Do Not Repost:</strong> Strictly no reposting, translating, or screenshotting to other platforms (Wattpad, TikTok, X, etc.) without permission. I also post my fanfic on my AO3 account — <a href="https://archiveofourown.org/users/your-ao3-username/profile" target="_blank" rel="noopener noreferrer">tap here / click link</a> if you want to leave kudos and comments!</li>
+        <li><strong>Non-Commercial:</strong> Entertainment purposes only. Not for commercial use.</li>
+      </ul>
+      <p class="gate-close"><strong>Most importantly, enjoy the fanfic!</strong></p>
+      <div class="gate-actions"><button class="button" id="agree-button" type="button">I am 18+ &amp; Agree</button><button class="button leave-button" id="leave-button" type="button">Leave</button></div>
+      <p class="gate-footnote">Your agreement is remembered on this device.</p>
+    </div>
+  </dialog>
+
+  <div id="site" aria-hidden="true" inert>
+    <header class="masthead">
+      <div class="wrap header-row">
+        <a class="brand" href="#home" aria-label="Dango Fiction Archive home"><span class="brand-mark" aria-hidden="true">d</span><span class="brand-name">Dango Fiction Archive<small>Stories for a slower evening</small></span></a>
+        <nav class="nav" id="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <details class="nav-menu"><summary>Fandom</summary><div class="nav-submenu"><button type="button" data-fandom="rpf">RPF</button><button type="button" data-fandom="tv-movies">TV &amp; Movies</button></div></details>
+          <details class="nav-menu"><summary>Browse</summary><div class="nav-submenu"><button type="button" data-browse-tags>By Tags</button><span class="submenu-label">Rating</span><button type="button" data-rating="general">General</button><button type="button" data-rating="teen">Teen</button><button type="button" data-rating="mature">Mature</button><span class="submenu-label">Status</span><button type="button" data-status-filter="ongoing">Ongoing</button><button type="button" data-status-filter="completed">Completed</button></div></details>
+          <button type="button" data-category="original">Original Stories</button>
+          <button type="button" id="all-works">All Works</button>
+        </nav>
+        <div class="header-actions"><button class="icon-button" id="search-toggle" type="button" aria-label="Close search" aria-expanded="true" title="Hide search">⌕</button><button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch theme">☼</button><button class="menu-button" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button></div>
+      </div>
+      <div class="wrap search-row open" id="search-row"><label class="skip" for="story-search">Search the archive</label><input id="story-search" type="search" placeholder="Search titles, tags, tropes..."></div>
+    </header>
+
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="wrap hero-inner"><p class="eyebrow">Welcome to</p><h1 id="hero-title">Dango Fiction</h1><p class="hero-copy">A small collection of fanfiction and original stories, made purely for your entertainment and daydreaming. Sit back, relax, and enjoy the ride!</p></div><span class="hero-caption">Collected beneath the canopy · Est. 2026</span></div>
+    </section>
+    <main id="main-content">
+      <section class="wrap section" id="library" aria-labelledby="library-title">
+        <div class="section-head"><div><p class="eyebrow">The story shelf</p><h2 id="library-title">All works</h2></div><p>Choose a path, follow a tag, and find the story that feels right for today.</p></div>
+        <section class="reading-history" id="reading-history" aria-labelledby="history-title" hidden><div class="history-head"><h3 id="history-title">Continue reading</h3><button class="history-clear" id="clear-reading-history" type="button">Clear history</button></div><ol class="history-list" id="reading-history-list"></ol></section>
+        <section class="tag-browser" aria-labelledby="tag-browser-title"><div class="tag-browser-head"><div><span class="tag-browser-title" id="tag-browser-title">Filter by tag</span><span class="tag-browser-hint">Choose one or more; stories matching any selected tag will appear.</span></div><button class="clear-tags" id="clear-tags" type="button" disabled>Clear tags</button></div><div class="tag-options" id="tag-options" role="group" aria-label="Available story tags"></div><p class="tag-filter-status" id="tag-filter-status" aria-live="polite">No tags selected</p></section>
+        <div class="works" id="works">
+          <article class="work" data-category="au" data-fandom="rpf" data-rating="mature" data-status="ongoing" data-search="the quiet between stations rpf college au slow burn friends to lovers romance mature ongoing">
+            <div class="work-copy"><div class="work-meta"><span class="badge rating-badge">Mature</span><span class="status-badge">Ongoing</span></div><h3><a class="work-title" href="story.html?story=stations&amp;chapter=1">The Quiet Between Stations</a></h3><p>Rain kept the last train waiting, and neither of them minded the delay as much as they should have. Between a borrowed umbrella and a warm cup of coffee, the silence began to feel like a place they both knew.</p><div class="tag-list"><button class="tag" data-tag="RPF">#RPF</button><button class="tag" data-tag="CollegeAU">#CollegeAU</button><button class="tag" data-tag="SlowBurn">#SlowBurn</button></div>
+          </article>
+          <article class="work" data-category="canon" data-rating="teen" data-status="completed" data-search="where the river turns canon divergence hurt comfort found family fantasy teen completed">
+            <div class="work-copy"><div class="work-meta"><span class="badge rating-badge">Teen</span><span class="status-badge">Completed</span></div><h3><a class="work-title" href="story.html?story=river&amp;chapter=1">Where the River Turns</a></h3><p>The old road ended at a river that was not marked on any map. Crossing it changed the journey, but the people they met on the other side gave them a reason to keep going.</p><div class="tag-list"><button class="tag" data-tag="HurtComfort">#HurtComfort</button><button class="tag" data-tag="FoundFamily">#FoundFamily</button><button class="tag" data-tag="Fantasy">#Fantasy</button></div>
+          </article>
+          <article class="work" data-category="original" data-rating="teen" data-status="ongoing" data-search="a softer kind of storm original work dark romance city originalwork teen ongoing">
+            <div class="work-copy"><div class="work-meta"><span class="badge rating-badge">Teen</span><span class="status-badge">Ongoing</span></div><h3><a class="work-title" href="story.html?story=storm&amp;chapter=1">A Softer Kind of Storm</a></h3><p>Every apartment on the block kept a window lit long after midnight. Mara thought it was the city refusing to sleep, until she noticed the same light waiting across the street night after night.</p><div class="tag-list"><button class="tag" data-tag="OriginalWork">#OriginalWork</button><button class="tag" data-tag="DarkRomance">#DarkRomance</button><button class="tag" data-tag="CityLife">#CityLife</button></div>
+          </article>
+        </div>
+        <p class="empty" id="empty-state" role="status">No stories match those filters. Try another path.</p>
+      </section>
+
+      <section class="wrap note-band" id="about" aria-labelledby="about-title"><div class="note-copy"><p class="eyebrow">Hi Readers</p><h2 id="about-title">Thank you for visiting.</h2><p>I've always wanted to bring the worlds in my imagination to life, so i'm sharing this story featuring my favorite trope. This is my very first step, and I truly hope you enjoy it!</p><a href="#library">Find a story to start with <span aria-hidden="true">→</span></a></div></section>
+    </main>
+    <footer class="footer"><div class="wrap footer-row"><a class="footer-brand" href="#home">Dango Fiction Archive</a><p>For entertainment only · Please respect the creator's boundaries.</p><nav class="footer-links" aria-label="Footer navigation"><a href="#library">All works</a><a href="#home">Back to top ↑</a></nav></div></footer>
+  </div>
+
+  <script>
+    const storage = { get(key) { try { return localStorage.getItem(key); } catch { return null; } }, set(key, value) { try { localStorage.setItem(key, value); } catch {} } };
+    const ageGate = document.getElementById('age-gate');
+    const site = document.getElementById('site');
+    const agreeButton = document.getElementById('agree-button');
+    function enterArchive() { site.inert = false; site.setAttribute('aria-hidden', 'false'); if (ageGate.open) ageGate.close(); }
+    if (storage.get('dango-fiction-age-agreed') === 'true') enterArchive(); else ageGate.showModal();
+    agreeButton.addEventListener('click', () => { storage.set('dango-fiction-age-agreed', 'true'); enterArchive(); });
+    document.getElementById('leave-button').addEventListener('click', () => { window.location.replace('about:blank'); });
+
+    const root = document.documentElement;
+    const themeButton = document.getElementById('theme-toggle');
+    const savedTheme = storage.get('dango-fiction-theme');
+    if (savedTheme === 'light') root.dataset.theme = 'light';
+    function updateThemeButton() { const light = root.dataset.theme === 'light'; themeButton.textContent = light ? '☾' : '☼'; themeButton.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode'); themeButton.title = light ? 'Switch to dark mode' : 'Switch to light mode'; }
+    updateThemeButton();
+    themeButton.addEventListener('click', () => { root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light'; storage.set('dango-fiction-theme', root.dataset.theme); updateThemeButton(); });
+
+    const cards = [...document.querySelectorAll('.work')];
+    const searchInput = document.getElementById('story-search');
+    const emptyState = document.getElementById('empty-state');
+    const readingHistorySection = document.getElementById('reading-history');
+    const readingHistoryList = document.getElementById('reading-history-list');
+    const clearReadingHistory = document.getElementById('clear-reading-history');
+    const readingHistoryKey = 'dango-fiction-reading-history';
+    function loadReadingHistory() {
+      try {
+        const historyItems = JSON.parse(storage.get(readingHistoryKey) || '[]');
+        return Array.isArray(historyItems) ? historyItems.filter(item => item && typeof item.storyId === 'string' && /^[a-z0-9-]+$/i.test(item.storyId) && typeof item.title === 'string' && typeof item.chapterTitle === 'string' && Number.isFinite(new Date(Number(item.updatedAt)).getTime())).slice(0, 20) : [];
+      } catch { return []; }
+    }
+    function renderReadingHistory() {
+      const historyItems = loadReadingHistory();
+      readingHistorySection.hidden = historyItems.length === 0;
+      readingHistoryList.replaceChildren(...historyItems.map(item => {
+        const listItem = document.createElement('li');
+        listItem.className = 'history-item';
+        const details = document.createElement('div');
+        const link = document.createElement('a');
+        link.className = 'history-story';
+        link.textContent = item.title;
+        const chapter = Math.max(1, Number(item.chapter) || 1);
+        link.href = item.mode === 'entire' ? `story.html?story=${encodeURIComponent(item.storyId)}&mode=entire` : `story.html?story=${encodeURIComponent(item.storyId)}&chapter=${chapter}`;
+        const detail = document.createElement('p');
+        detail.className = 'history-detail';
+        detail.textContent = item.mode === 'entire' ? `Entire Work · last selected: Chapter ${chapter} — ${item.chapterTitle}` : `Chapter ${chapter} — ${item.chapterTitle}`;
+        const time = document.createElement('time');
+        time.className = 'history-time';
+        const timestamp = Number(item.updatedAt);
+        time.dateTime = new Date(timestamp).toISOString();
+        time.textContent = `Last read ${new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeStyle: 'short' }).format(timestamp)}`;
+        details.append(link, detail);
+        listItem.append(details, time);
+        return listItem;
+      }));
+    }
+    clearReadingHistory.addEventListener('click', () => { storage.set(readingHistoryKey, '[]'); renderReadingHistory(); });
+    renderReadingHistory();
+    window.addEventListener('pageshow', renderReadingHistory);
+    const tagOptions = document.getElementById('tag-options');
+    const tagStatus = document.getElementById('tag-filter-status');
+    const clearTagsButton = document.getElementById('clear-tags');
+    const selectedTags = new Set();
+    const allTags = [...new Set([...document.querySelectorAll('.work [data-tag]')].map(button => button.dataset.tag))].sort((first, second) => first.localeCompare(second));
+    let activeCategory = 'all';
+    let activeFandom = 'all';
+    let activeRating = 'all';
+    let activeStatus = 'all';
+    function updateTagControls() {
+      tagOptions.querySelectorAll('[data-tag-option]').forEach(button => {
+        button.setAttribute('aria-pressed', String(selectedTags.has(button.dataset.tagOption)));
+      });
+      clearTagsButton.disabled = selectedTags.size === 0;
+      tagStatus.textContent = selectedTags.size ? `Selected: ${[...selectedTags].map(tag => `#${tag}`).join(', ')}` : 'No tags selected';
+    }
+    function toggleTag(tag) {
+      if (selectedTags.has(tag)) selectedTags.delete(tag); else selectedTags.add(tag);
+      updateTagControls();
+      updateWorks();
+    }
+    function updateWorks() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const categoryMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+        const fandomMatch = activeFandom === 'all' || card.dataset.fandom === activeFandom;
+        const ratingMatch = activeRating === 'all' || card.dataset.rating === activeRating;
+        const statusMatch = activeStatus === 'all' || card.dataset.status === activeStatus;
+        const cardTags = [...card.querySelectorAll('[data-tag]')].map(button => button.dataset.tag);
+        const tagMatch = selectedTags.size === 0 || [...selectedTags].some(tag => cardTags.includes(tag));
+        const queryMatch = !query || `${card.dataset.search} ${card.textContent}`.toLowerCase().includes(query);
+        card.hidden = !(categoryMatch && fandomMatch && ratingMatch && statusMatch && tagMatch && queryMatch);
+        if (!card.hidden) visibleCount++;
+      });
+      emptyState.classList.toggle('show', visibleCount === 0);
+    }
+    function setCategory(category) {
+      activeCategory = category;
+      updateWorks();
+      document.getElementById('library').scrollIntoView({ behavior: 'smooth' });
+    }
+    document.querySelectorAll('.nav [data-category]').forEach(button => button.addEventListener('click', () => setCategory(button.dataset.category)));
+    document.querySelectorAll('[data-fandom]').forEach(button => button.addEventListener('click', () => { activeFandom = button.dataset.fandom; updateWorks(); document.getElementById('library').scrollIntoView({ behavior: 'smooth' }); }));
+    document.querySelectorAll('[data-rating]').forEach(button => button.addEventListener('click', () => { activeRating = button.dataset.rating; updateWorks(); document.getElementById('library').scrollIntoView({ behavior: 'smooth' }); }));
+    document.querySelectorAll('[data-status-filter]').forEach(button => button.addEventListener('click', () => { activeStatus = button.dataset.statusFilter; updateWorks(); document.getElementById('library').scrollIntoView({ behavior: 'smooth' }); }));
+    document.querySelector('[data-browse-tags]').addEventListener('click', () => document.getElementById('tag-browser-title').scrollIntoView({ behavior: 'smooth', block: 'center' }));
+    document.getElementById('all-works').addEventListener('click', () => { activeCategory = 'all'; activeFandom = 'all'; activeRating = 'all'; activeStatus = 'all'; selectedTags.clear(); searchInput.value = ''; updateTagControls(); updateWorks(); document.getElementById('library').scrollIntoView({ behavior: 'smooth' }); });
+    searchInput.addEventListener('input', updateWorks);
+    tagOptions.addEventListener('click', event => { const button = event.target.closest('[data-tag-option]'); if (button) toggleTag(button.dataset.tagOption); });
+    clearTagsButton.addEventListener('click', () => { selectedTags.clear(); updateTagControls(); updateWorks(); });
+    document.querySelectorAll('.work [data-tag]').forEach(button => button.addEventListener('click', () => toggleTag(button.dataset.tag)));
+    allTags.forEach(tag => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'tag-option';
+      button.dataset.tagOption = tag;
+      button.textContent = `#${tag}`;
+      button.setAttribute('aria-pressed', 'false');
+      tagOptions.append(button);
+    });
+    updateTagControls();
+
+    const searchRow = document.getElementById('search-row');
+    const searchToggle = document.getElementById('search-toggle');
+    searchToggle.addEventListener('click', () => { const open = searchRow.classList.toggle('open'); searchToggle.setAttribute('aria-expanded', String(open)); searchToggle.setAttribute('aria-label', open ? 'Close search' : 'Open search'); if (open) searchInput.focus(); else { searchInput.value = ''; updateWorks(); } });
+    const mainNav = document.getElementById('main-nav');
+    const menuToggle = document.getElementById('menu-toggle');
+    menuToggle.addEventListener('click', () => { const open = mainNav.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', String(open)); menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); menuToggle.textContent = open ? '×' : '☰'; });
+    mainNav.querySelectorAll('a,button').forEach(item => item.addEventListener('click', () => { mainNav.classList.remove('open'); mainNav.querySelectorAll('details').forEach(menu => { menu.open = false; }); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.setAttribute('aria-label', 'Open menu'); menuToggle.textContent = '☰'; }));
+
+  </script>
+</body>
+</html>

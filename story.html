@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18211d">
+  <meta name="description" content="Read a story from the Dango Fiction Archive.">
+  <title>Story · Dango Fiction Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#18211d;--surface:#202b26;--raised:#27342e;--ink:#f0eee4;--muted:#b0b9ad;--line:#3b4840;--accent:#c3d8a5;--accent-ink:#202b20;--warm:#e6bf83;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif}
+    :root[data-theme="light"]{color-scheme:light;--bg:#f2f2e9;--surface:#fafaf5;--raised:#e6eadf;--ink:#243029;--muted:#69756a;--line:#d3dbcf;--accent:#48674e;--accent-ink:#fff;--warm:#946a35}
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);transition:background .2s,color .2s}button,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{color:inherit;cursor:pointer}a{color:inherit;text-decoration:none}:focus-visible{outline:3px solid var(--warm);outline-offset:3px}.wrap{width:min(850px,calc(100% - 40px));margin-inline:auto}.masthead{border-bottom:1px solid var(--line)}.header{display:flex;min-height:72px;align-items:center;justify-content:space-between;gap:18px}.brand{font:600 19px var(--serif)}.brand span{margin-right:8px;color:var(--accent)}.header-right{display:flex;align-items:center;gap:14px}.back-link,.theme-toggle{color:var(--muted);font-size:12px}.back-link:hover{color:var(--ink)}.theme-toggle{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:transparent;font-size:17px}.story-head{padding:45px 0 27px;border-bottom:1px solid var(--line)}.eyebrow{margin:0;color:var(--accent);font-size:10px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase}.story-head h1{margin:9px 0 10px;font:500 42px/1.15 var(--serif);letter-spacing:0}.summary{max-width:64ch;margin:0;color:var(--muted);font-size:13px}.metadata{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.badge{padding:3px 8px;border:1px solid var(--line);color:var(--muted);font-size:10px}.badge.original{border-color:#7892a0;color:#abc7d2}.chapter-nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:15px 0;border-bottom:1px solid var(--line)}.chapter-nav select,.chapter-nav button{min-height:36px;padding:6px 10px;border:1px solid var(--line);border-radius:2px;background:var(--surface);color:var(--ink);font-size:11px}.chapter-nav select{min-width:min(220px,100%)}.chapter-nav button:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}.chapter-nav button:disabled{cursor:not-allowed;opacity:.4}.chapter-nav .spacer{flex:1}.index-panel{display:none;padding:17px 0;border-bottom:1px solid var(--line)}.index-panel.open{display:block}.index-panel h2{margin:0 0 9px;font:500 20px var(--serif)}.index-list{margin:0;padding-left:23px}.index-list li{padding:4px 0;color:var(--muted);font-size:12px}.index-list a:hover{color:var(--accent)}.chapter-heading{max-width:66ch;margin:35px auto 22px}.chapter-heading .eyebrow{margin-bottom:5px}.chapter-heading h2{margin:0;font:500 28px/1.25 var(--serif)}.reader{max-width:66ch;min-height:200px;margin:0 auto;padding:0 0 22px;font-size:18px;line-height:1.85}.reader p{margin:0 0 1.25em}.kudos{display:flex;flex-direction:column;align-items:center;gap:7px;margin:38px 0 30px;padding:23px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}.kudos button{min-height:43px;padding:9px 16px;border:1px solid var(--accent);border-radius:2px;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:700}.kudos button:disabled{cursor:default;opacity:.8}.kudos-count,.kudos-message{margin:0;color:var(--muted);font-size:11px}.kudos-message{min-height:18px;color:var(--accent)}.footer{margin-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.footer .wrap{display:flex;min-height:65px;align-items:center;justify-content:space-between;gap:12px}.footer p{margin:0}.not-found{padding:70px 0;text-align:center}.not-found h1{font:500 34px var(--serif)}
+    @media(max-width:600px){.wrap{width:calc(100% - 32px)}.header{min-height:65px}.brand{font-size:16px}.header-right{gap:9px}.story-head{padding:34px 0 22px}.story-head h1{font-size:34px}.chapter-nav{gap:6px}.chapter-nav select{order:1;width:100%}.chapter-nav .spacer{display:none}.chapter-nav button{flex:1}.chapter-heading{margin-top:28px}.chapter-heading h2{font-size:24px}.reader{font-size:17px}.footer .wrap{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:14px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="masthead"><div class="wrap header"><a class="brand" href="archive.html"><span aria-hidden="true">d</span>Dango Fiction Archive</a><div class="header-right"><a class="back-link" href="archive.html#library">← All works</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch theme">☼</button></div></div></header>
+  <main class="wrap" id="story-page" hidden>
+    <header class="story-head"><p class="eyebrow" id="story-category"></p><h1 id="story-title"></h1><p class="summary" id="story-summary"></p><div class="metadata" id="story-metadata"></div></header>
+    <div class="chapter-nav" data-chapter-controls></div>
+    <nav class="index-panel" id="chapter-index" aria-label="Chapter index"><h2>Chapter Index</h2><ol class="index-list" id="index-list"></ol></nav>
+    <div class="chapter-heading"><p class="eyebrow" id="chapter-position"></p><h2 id="chapter-title"></h2></div>
+    <article class="reader" id="reader"></article>
+    <div class="chapter-nav" data-chapter-controls></div>
+    <section class="kudos" aria-label="Give kudos"><button id="kudos-button" type="button">👏 Applause / Give Kudos</button><p class="kudos-count" id="kudos-count" aria-live="polite"></p><p class="kudos-message" id="kudos-message" aria-live="polite"></p></section>
+  </main>
+  <main class="wrap not-found" id="not-found" hidden><h1>Story not found</h1><p>This story may have moved or the link may be incomplete.</p><a class="back-link" href="archive.html#library">Return to all works</a></main>
+  <footer class="footer"><div class="wrap"><p>For entertainment only · Please respect the creator's boundaries.</p><a class="back-link" href="archive.html#library">Return to the archive ↑</a></div></footer>
+  <script>
+    const works = {
+      stations: { title: 'The Quiet Between Stations', category: 'RPF · Alternate Universe', summary: 'College AU · Slow burn · Friends to lovers · Mature themes', status: 'Ongoing', tags: ['#RPF', '#CollegeAU', '#SlowBurn'], chapters: [
+        { title: 'The Last Train', paragraphs: ['Rain had been tapping against the station roof for nearly an hour when the last train finally arrived. Neither of them had meant to wait together; the evening simply kept making other plans.', 'A paper cup warmed both hands. Outside, the city folded itself into reflections on the glass, and the conversation wandered from lectures to old songs neither of them admitted to remembering.', 'When the train doors opened, they stepped aboard side by side. The quiet between stations felt, for once, like somewhere to stay.'] },
+        { title: 'A Borrowed Umbrella', paragraphs: ['The umbrella appeared beside his desk the next morning, still damp at the edges. A note was tucked beneath the handle: You forgot this. I did not mind the walk.', 'He read the message twice before folding it carefully into his notebook. All day, the small square of paper seemed warmer than it should have been.', 'That evening, he waited by the station doors with two coffees. The rain had stopped, but neither of them mentioned it.'] },
+        { title: 'The Way Home', paragraphs: ['They began taking the long route home without ever agreeing to. It passed the riverside, a late-night bakery, and a bench where the city sounded softer.', 'Somewhere along that familiar detour, a joke became a confession. The answer came slowly, honestly, and with a smile that made the wait worthwhile.', 'The next train arrived on time. They let it leave without them.'] }
+      ] },
+      river: { title: 'Where the River Turns', category: 'Canon Divergence', summary: 'Fantasy · Found family · Hurt/comfort', status: 'Completed', tags: ['#HurtComfort', '#FoundFamily', '#Fantasy'], chapters: [
+        { title: 'The Unmarked Crossing', paragraphs: ['The old road ended at a river. On the map, it was a thin blue line; in front of them, it was a whole new answer.', 'They crossed at first light, carrying only what they could mend and the names they had promised not to forget.', 'On the far bank, someone had left a lantern burning beneath the trees.'] },
+        { title: 'A Place at the Table', paragraphs: ['The house by the river had one empty chair and enough soup for all of them. Nobody asked where they had come from until they had eaten.', 'For the first time in weeks, they slept without taking turns at the door. The river kept watch instead, moving steadily beneath the moon.', 'In the morning, they found a map drawn by hand. The road ahead had room for everyone.'] },
+        { title: 'The Other Shore', paragraphs: ['By the time spring reached the valley, the map had grown soft at its folds. They had added villages, safe paths, and the names of people who had offered help.', 'The river did not divide the world as they once believed. It carried stories from one shore to the other, and they had learned how to listen.', 'When they finally turned toward home, nobody walked alone.'] }
+      ] },
+      storm: { title: 'A Softer Kind of Storm', category: 'Original Story', summary: 'Original work · City life · Dark romance', status: 'Ongoing', tags: ['#OriginalWork', '#DarkRomance', '#CityLife'], chapters: [
+        { title: 'The Light Across the Street', paragraphs: ['Every apartment on the block kept one window lit long after midnight. Mara used to think it was the city refusing to sleep. Then she noticed the same light waiting across the street, night after night.', 'The first note was small enough to fit beneath her door: You left your umbrella downstairs. The next one asked if she had made it home safely.', 'She began leaving her own light on. Not as an answer, she told herself. Just in case.'] },
+        { title: 'Notes in the Hallway', paragraphs: ['His name was Elias. She learned it from a package left at the wrong door, then from the careful handwriting that appeared on folded scraps of paper.', 'They spoke for the first time in the hallway during a power cut. Without the city between them, he seemed less like a stranger and more like someone who had also been waiting.', 'The storm outside softened to rain. Neither of them rushed to say goodnight.'] },
+        { title: 'A Window Left Open', paragraphs: ['The city was still loud, still restless, but Mara had stopped mistaking every sound for a warning. Across the street, one window stayed bright.', 'Elias brought tea. She opened the window before he knocked, letting the evening air move through the room.', 'Some storms passed. Some only changed the way you learned to stand together.'] }
+      ] }
+    };
+    const getStorage = (store, key) => { try { return store.getItem(key); } catch { return null; } };
+    const setStorage = (store, key, value) => { try { store.setItem(key, value); } catch {} };
+    if (getStorage(localStorage, 'dango-fiction-age-agreed') !== 'true') window.location.replace('archive.html');
+    const root = document.documentElement;
+    const savedTheme = getStorage(localStorage, 'dango-fiction-theme');
+    if (savedTheme === 'light') root.dataset.theme = 'light';
+    const themeToggle = document.getElementById('theme-toggle');
+    function updateTheme() { const light = root.dataset.theme === 'light'; themeToggle.textContent = light ? '☾' : '☼'; themeToggle.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode'); }
+    updateTheme();
+    themeToggle.addEventListener('click', () => { root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light'; setStorage(localStorage, 'dango-fiction-theme', root.dataset.theme); updateTheme(); });
+
+    const params = new URLSearchParams(window.location.search);
+    const storyId = params.get('story');
+    const story = works[storyId];
+    const storyPage = document.getElementById('story-page');
+    const notFound = document.getElementById('not-found');
+    if (!story) { notFound.hidden = false; } else {
+      storyPage.hidden = false;
+      document.title = `${story.title} · Dango Fiction Archive`;
+      document.getElementById('story-category').textContent = story.category;
+      document.getElementById('story-title').textContent = story.title;
+      document.getElementById('story-summary').textContent = story.summary;
+      const metadata = document.getElementById('story-metadata');
+      [story.status, ...story.tags].forEach((label, index) => { const badge = document.createElement('span'); badge.className = `badge${storyId === 'storm' && index > 0 ? ' original' : ''}`; badge.textContent = label; metadata.append(badge); });
+      const entire = params.get('mode') === 'entire';
+      const requestedChapter = Number(params.get('chapter') || 1);
+      let chapter = Math.min(story.chapters.length, Math.max(1, requestedChapter));
+      const indexPanel = document.getElementById('chapter-index');
+      const chapterIndex = document.getElementById('index-list');
+      const chapterTitle = document.getElementById('chapter-title');
+      const chapterPosition = document.getElementById('chapter-position');
+      const reader = document.getElementById('reader');
+      const controlGroups = [...document.querySelectorAll('[data-chapter-controls]')];
+      const chapterUrl = (number, mode = '') => `story.html?story=${encodeURIComponent(storyId)}${mode ? `&mode=${mode}` : `&chapter=${number}`}`;
+      function recordReadingProgress(showEntire, selectedChapter) {
+        let historyItems = [];
+        try { historyItems = JSON.parse(getStorage(localStorage, 'dango-fiction-reading-history') || '[]'); } catch {}
+        if (!Array.isArray(historyItems)) historyItems = [];
+        const lastChapter = story.chapters[selectedChapter - 1];
+        const progress = { storyId, title: story.title, chapter: selectedChapter, chapterTitle: showEntire ? 'Entire Work' : lastChapter.title, mode: showEntire ? 'entire' : 'chapter', updatedAt: Date.now() };
+        historyItems = [progress, ...historyItems.filter(item => item && item.storyId !== storyId)].slice(0, 20);
+        setStorage(localStorage, 'dango-fiction-reading-history', JSON.stringify(historyItems));
+      }
+      function navigate(number, mode = '') { history.pushState({}, '', chapterUrl(number, mode)); render(mode === 'entire', number); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+      function render(showEntire = false, selected = chapter) {
+        chapter = selected;
+        const chaptersToShow = showEntire ? story.chapters : [story.chapters[chapter - 1]];
+        chapterTitle.textContent = showEntire ? 'Entire Work' : story.chapters[chapter - 1].title;
+        chapterPosition.textContent = showEntire ? `${story.chapters.length} chapters` : `Chapter ${chapter} of ${story.chapters.length}`;
+        reader.replaceChildren(...chaptersToShow.flatMap((item, index) => item.paragraphs.flatMap((text, paragraphIndex) => {
+          const nodes = [];
+          if (showEntire && paragraphIndex === 0) { const heading = document.createElement('h3'); heading.textContent = `${index + 1}. ${item.title}`; heading.style.cssText = 'margin:2em 0 1em;font:500 22px var(--serif)'; nodes.push(heading); }
+          const paragraph = document.createElement('p'); paragraph.textContent = text; nodes.push(paragraph); return nodes;
+        })));
+        indexPanel.classList.remove('open');
+        for (const group of controlGroups) {
+          const select = document.createElement('select'); select.setAttribute('aria-label', 'Choose chapter');
+          story.chapters.forEach((item, index) => { const option = document.createElement('option'); option.value = String(index + 1); option.textContent = `Chapter ${index + 1}: ${item.title}`; option.selected = index + 1 === chapter; select.append(option); });
+          select.addEventListener('change', () => navigate(Number(select.value)));
+          const previous = document.createElement('button'); previous.type = 'button'; previous.textContent = '← Previous Chapter'; previous.disabled = showEntire || chapter <= 1; previous.addEventListener('click', () => navigate(chapter - 1));
+          const next = document.createElement('button'); next.type = 'button'; next.textContent = 'Next Chapter →'; next.disabled = showEntire || chapter >= story.chapters.length; next.addEventListener('click', () => navigate(chapter + 1));
+          const all = document.createElement('button'); all.type = 'button'; all.textContent = showEntire ? 'Current Chapter' : 'Entire Work'; all.addEventListener('click', () => navigate(chapter, showEntire ? '' : 'entire'));
+          const index = document.createElement('button'); index.type = 'button'; index.textContent = 'Chapter Index'; index.addEventListener('click', () => { indexPanel.classList.toggle('open'); if (indexPanel.classList.contains('open')) indexPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); });
+          group.replaceChildren(previous, next, select, all, index);
+        }
+        recordReadingProgress(showEntire, chapter);
+      }
+      story.chapters.forEach((item, index) => { const li = document.createElement('li'); const link = document.createElement('a'); link.href = chapterUrl(index + 1); link.textContent = item.title; link.addEventListener('click', event => { event.preventDefault(); navigate(index + 1); }); li.append(link); chapterIndex.append(li); });
+      render(entire, chapter);
+      window.addEventListener('popstate', () => { const current = new URLSearchParams(window.location.search); render(current.get('mode') === 'entire', Number(current.get('chapter') || 1)); });
+
+      let fontSize = 18;
+      let lineSpacing = 1.85;
+      function applyReadingStyle() { reader.style.fontSize = `${fontSize}px`; reader.style.lineHeight = String(lineSpacing); }
+      const fontControls = document.createElement('div');
+      fontControls.className = 'chapter-nav';
+      fontControls.setAttribute('aria-label', 'Reading preferences');
+      fontControls.innerHTML = '<span class="spacer"></span><button type="button" data-size="down" aria-label="Decrease font size">A−</button><button type="button" data-size="up" aria-label="Increase font size">A+</button><button type="button" data-line="down" aria-label="Decrease line spacing">Line −</button><button type="button" data-line="up" aria-label="Increase line spacing">Line +</button>';
+      document.querySelector('.story-head').after(fontControls);
+      fontControls.addEventListener('click', event => { const control = event.target.closest('button'); if (!control) return; if (control.dataset.size === 'up') fontSize = Math.min(26, fontSize + 1); if (control.dataset.size === 'down') fontSize = Math.max(14, fontSize - 1); if (control.dataset.line === 'up') lineSpacing = Math.min(2.5, +(lineSpacing + .1).toFixed(1)); if (control.dataset.line === 'down') lineSpacing = Math.max(1.4, +(lineSpacing - .1).toFixed(1)); applyReadingStyle(); });
+
+      const kudosKey = `dango-fiction-kudos-${storyId}`;
+      const sessionKey = `dango-fiction-kudos-session-${storyId}`;
+      const kudosButton = document.getElementById('kudos-button');
+      const kudosCount = document.getElementById('kudos-count');
+      const kudosMessage = document.getElementById('kudos-message');
+      function updateKudos() { const count = Number(getStorage(localStorage, kudosKey) || 0); const alreadyGave = getStorage(sessionStorage, sessionKey) === 'true'; kudosCount.textContent = `${count.toLocaleString()} ${count === 1 ? 'kudos' : 'kudos'} · this browser`; kudosButton.disabled = alreadyGave; if (alreadyGave) { kudosButton.textContent = '👏 Kudos given'; kudosMessage.textContent = 'Thank you for reading and leaving some love.'; } }
+      kudosButton.addEventListener('click', () => { if (getStorage(sessionStorage, sessionKey) === 'true') return; const count = Number(getStorage(localStorage, kudosKey) || 0) + 1; setStorage(localStorage, kudosKey, String(count)); setStorage(sessionStorage, sessionKey, 'true'); updateKudos(); });
+      updateKudos();
+    }
+  </script>
+</body>
+</html>
